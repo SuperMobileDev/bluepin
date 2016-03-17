@@ -1,0 +1,21 @@
+<head>
+  <title>bluepin</title>
+</head>
+
+<body>
+  {{> loginButtons}}
+
+  <br/>
+  {{> layout}}
+</body>
+
+<template name="layout">
+  {{#each images}}
+    <img class="thumbnail" src="{{src}}" width="100px;"/>
+  {{/each}}
+  <form>
+    <input id="fileinput" type="file"/>
+    <button type="submit">Upload</button>
+  </form>
+</template>
+
